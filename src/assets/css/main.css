@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+
+body {
+    min-height: 100vh;    
+    background-color: #c0c0c0;
+    background-image: url("../img/tree-bark.png");
+    font-family: 'Work Sans', sans-serif !important;    
+}
+
+#discution_content {
+    background-color: rgba(3, 148, 99, 0.301);
+    margin: 5px;
+    min-height: 70vh;
+    overflow: auto;
+}
+
+#nav_bar {
+    background-color: rgba(255, 255, 255, 0.514);
+    padding:0;
+    height: auto;
+    margin-top: 10px;    
+}
+
+#current_chan {
+    font-size: 30px;
+    color: #00C4A7;
+    text-align: center;
+}
+
+ #container_chat {
+     background-color: white;
+     padding: 10px;
+     box-shadow: 0px 2px rgba(0, 0, 0, 0.24);
+ }
+
+ .section {
+     padding: 1.5rem 1.5rem;
+ }
+ .is-half-rounded {
+     border-radius: 10px;
+ }
+
+#modal_window {
+    display: none;
+    position: fixed;
+    z-index: 100; 
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#modal_content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+}
+
+.is-rounded {
+    border-radius: 290486px;
+}
+.remove_element {
+    float: right;
+    cursor: pointer;
+    margin-top: -20px;   
+    margin-right: -5px; 
+}
+
+.alert {
+	border-radius: 5px;
+    width: 100%;
+    margin-left: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+    padding-right: 10px;
+}
+
+.alert-box {
+    position: fixed;
+	bottom: 0px;
+    z-index: 200;
+}
+
+.alert-valid {
+	border-color: #d6e9c6;
+	background-color: #dff0d8;
+	color: #3c763d;
+}
+
+.alert-error {
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+}
