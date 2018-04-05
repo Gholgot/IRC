@@ -8,10 +8,10 @@ import { ExtraFeaturesComponent } from  '../extra-features/extra-features.compon
 })
 export class NavbarComponent implements OnInit {
 
-  extra_features: any[] = [];
+  extra_features:any;
 
   constructor() {
-    this.extra_features['modal'] = new ExtraFeaturesComponent('modal');
+    this.extra_features = new ExtraFeaturesComponent('modal');
   }
 
   ngOnInit() {

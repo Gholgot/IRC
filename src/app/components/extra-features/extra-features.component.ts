@@ -9,14 +9,19 @@ import { ModalComponent } from '../modal/modal.component';
 
 export class ExtraFeaturesComponent implements OnInit {
 
-  modal:ModalComponent;
+  public modal:ModalComponent;
 
   constructor(feature:string) {
-    this.modal = new ModalComponent();
-    return this[feature];
+    if (feature == "modal") {
+      this.modal = new ModalComponent();
+    }
    }
 
   ngOnInit() {
+  }
+
+  public Capitalize(lower_string:string):string {
+    return lower_string.charAt(0).toUpperCase() + lower_string.slice(1);
   }
   
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 
+import ModalStore from "./contents/modal_store";
+
 declare var $:any;
 
 @Component({
@@ -10,7 +12,8 @@ declare var $:any;
 })
 export class ModalComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit() {
     
@@ -19,9 +22,9 @@ export class ModalComponent implements OnInit {
   // This function is going to load the choosen modal and if it doesn't exist
   // it won't display anything
   public load(modal_name: string): any {
-    var modal_path:string = "contents/" + modal_name + ".html";
-    // Find a way to import HTMl files into current code, i want to dinamically load modal content
-    
+    var desired_modal:any = new ModalStore().modals[modal_name].content;
+    console.log("Loading Modal");
+    this.write_modal(desired_modal);
   }
 
   //____________ Functions _________    
