@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 
-import ModalStore from "./contents/modal_store";
-
 declare var $:any;
 
 @Component({
@@ -22,12 +20,10 @@ export class ModalComponent implements OnInit {
   // This function is going to load the choosen modal and if it doesn't exist
   // it won't display anything
   public load(modal_name: string): any {
-    var desired_modal:any = new ModalStore().modals[modal_name].content;
-    console.log("Loading Modal");
-    this.write_modal(desired_modal);
+    //var desired_modal:any = new ModalStore().modals[modal_name].content;
+    //this.write_modal(desired_modal);
   }
 
-  //____________ Functions _________    
   // This function is going to load the content into the modal and make is apear
   private write_modal(content:string) {
     $("#modal_content").html(content);
@@ -61,18 +57,22 @@ export class ModalComponent implements OnInit {
   // This function is going to create the event on modal-cross
   private modal_remove() {
     $(".modal_cross").click(function () {
-      $('#modal_window').slideUp("300");
+      $('#modal_window').slideUp("600");
       setTimeout(function () {
         $('#modal_content').html('');
       }, 600);
     });
-    $('.send_form').click(function () {
-      var input_values = {};
-      $(".form").serializeArray().forEach(function (input) {
-        input_values[input.name] = input.value;
-      });
-      this.send_form(input_values, $('.form').attr('name'));
-    })
+    // $('.send_form').click(function () {
+    //   var input_values = {};
+    //   $(".form").serializeArray().forEach(function (input) {
+    //     input_values[input.name] = input.value;
+    //   });
+    //   this.send_form(input_values, $('.form').attr('name'));
+    // })
   }
 
+  // This function is going to be used to send form to API
+  public send_form(user_input:string, form_name:string) {
+    console.log('Data send not for real');
+  }
 }

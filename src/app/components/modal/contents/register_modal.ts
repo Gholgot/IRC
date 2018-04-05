@@ -73,7 +73,7 @@ export default class RegisterModal {
             <div class="section">
                 <div class="field is-grouped">
                     <div class="control">
-                        <button class="button is-link send_form">Enlist</button>
+                        <button class="button is-link" (click)=send_form('test', 'test')>Enlist</button>
                     </div>
                     <div class="control">
                         <button class="button is-danger modal_cross">Cancel</button>

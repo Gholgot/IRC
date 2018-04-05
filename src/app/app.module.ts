@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
-import { UserComponent } from './components/user/user.component';
 import { RoomComponent } from './components/room/room.component';
 import { MessageComponent } from './components/message/message.component';
 import { ModalComponent } from './components/modal/modal.component';
@@ -21,7 +20,6 @@ import { RoomService} from './services/room.service';
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
     RoomComponent,
     MessageComponent,
     ModalComponent,
